@@ -25,13 +25,21 @@ jobs:
           FIRST: "Pradeep"
           LAST: "KUMAR"
   windows_plateform:
+    needs: ubuntu_plateform
     runs-on: windows-latest
     steps:
       - name: windows directory
         run: dir
         shell: cmd
   mac_plateform:
+    needs: [ubuntu_plateform, windows_plateform]
     runs-on: macos-latest
     steps:
       - name: run mac
         run: ls
+
+  github_object_print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: github
+        run: echo "${{fromJSON(github)}}"
