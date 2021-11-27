@@ -1,0 +1,12 @@
+name: learn workflows
+
+on: [push]
+
+jobs:
+  learning:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print node and npm version
+        run: |
+          npm -v
+          node -v
