@@ -8,9 +8,11 @@ env:
 jobs:
   learning:
     runs-on: ubuntu-latest
+    env:
+      LEARNING_ENV: "LEARNING"
     steps:
       - name: print node and npm version
         run: |
           npm -v
           node -v
-          echo $GLOBAL_ENV
+          echo `$GLOBAL_ENV - $LEARNING_ENV `
