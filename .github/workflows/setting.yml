@@ -12,6 +12,7 @@ jobs:
       LEARNING_ENV: "LEARNING"
     steps:
       - name: print node and npm version
+        id: ubuntu
         run: |
           npm -v
           node -v
@@ -29,3 +30,8 @@ jobs:
       - name: windows directory
         run: dir
         shell: cmd
+  mac_plateform:
+    runs-on: macos-latest
+    steps:
+      - name: run mac
+        run: ls
