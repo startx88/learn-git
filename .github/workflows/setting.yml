@@ -6,7 +6,7 @@ env:
   GLOBAL_ENV: "GLOBAL"
 
 jobs:
-  learning:
+  ubuntu_plateform:
     runs-on: ubuntu-latest
     env:
       LEARNING_ENV: "LEARNING"
@@ -23,3 +23,9 @@ jobs:
         env:
           FIRST: "Pradeep"
           LAST: "KUMAR"
+  windows_plateform:
+    runs-on: windows-latest
+    steps:
+      - name: windows directory
+        run: dir
+        shell: cmd
