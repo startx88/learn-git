@@ -15,4 +15,8 @@ jobs:
         run: |
           npm -v
           node -v
-          echo `$GLOBAL_ENV - $LEARNING_ENV `
+          echo "$GLOBAL_ENV - $LEARNING_ENV "
+          echo "HELLO $FIRST $LAST"
+        env:
+          FIRST: "Pradeep"
+          LAST: "KUMAR"
