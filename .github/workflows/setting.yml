@@ -17,6 +17,9 @@ jobs:
           node -v
           echo "$GLOBAL_ENV - $LEARNING_ENV "
           echo "HELLO $FIRST $LAST"
+          echo $GITHUB_ENV
+          echo $GITHUB_RUN_ID
+          echo $GITHUB_RUN_NUMBER
         env:
           FIRST: "Pradeep"
           LAST: "KUMAR"
